@@ -1,0 +1,254 @@
+
+
+body {
+    background-color: #fff4d5;
+    font-family: Alice;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #ffffea;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: #4b2e2b;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-list a {
+  color: #5c4033;
+  text-decoration: none;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s, color .2s;
+}
+
+.nav-list a.active {
+  color: #5c4033;
+  border-bottom-color: #ffd26a;
+  font-weight: 600;
+}
+
+.nav-list a:hover {
+  color: white;
+  border-bottom-color: #38bdf8;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* mobile */
+@media (max-width: 720px) {
+  .nav-toggle { display: block; background: none; border: 0; color: #4b2e2b; font-size: 20px; }
+  .nav-list { display: none; flex-direction: column; position: absolute; right: 20px; top: 56px; background: #ffffff; padding: 12px; border-radius: 8px; }
+  .nav-list.open { display: flex; }
+}
+
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+    background-color: #4b2e2b;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* --- 3. FOOTER (Blue Background) --- */
+.main-footer {
+    background-color: #4b2e2b; /* Use the primary blue color */
+    color: white; /* Default text color is white */
+    padding: 3rem 5% 1rem;
+    text-align: align;
+    
+}
+
+.footer-grid {
+    /* ... (Keep existing grid settings) ... */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Lighter divider for contrast */
+}
+
+.footer-grid h4 {
+    color: white; /* Headings are now white */
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+   
+}
+
+.footer-links a {
+    color: white; /* Links are white */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #4b2e2b; /* Use black/dark text on hover for contrast (if needed) */
+}
+
+/* Ensure all lists in the footer grid have no bullets */
+.footer-links ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8); /* Slightly more prominent white */
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr; /* Logo, Links, Social on desktop */
+    }
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* --- Section Divider Styling --- */
+.divider {
+    width: 100%; /* Full width */
+    height: 5px; /* Slightly thinner for elegance */
+    background: #ffffea; /* Use the defined rainbow gradient */
+    margin: 30px 0; /* Generous vertical spacing for separation on desktop */
+    border: none;
+}
+
+.hero {
+    background: linear-gradient (135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    
+    color: #4b2e2b;
+    padding: 120px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+ .banner {
+    background: linear-gradient (135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%),
+    url('hero.jpg') center/cover;
+    color: #4b2e2b;
+    padding: 60px 0;
+    min-height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.contact-card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px;
+  background: #4B2E2B;
+  color: #FDF6EC;
+  border-radius: 12px;
+  font-family: system-ui, sans-serif;
+  align-items: center;
+}
+
+.contact-card h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  color: #FDF6EC;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(253, 246, 236, 0.2); /* milk at 20% opacity */
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: #C8A882; /* that warm tan accent from focus states */
+}
+
+.contact-list a {
+  color: #FDF6EC;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.contact-list a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 20px 16px;
+    border-radius: 0;
+    margin: 16px 0;
+  }
+  
+  .contact-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #4B2E2B;
+  color: #FDF6EC;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.social-link:hover {
+  background: #C17D3C;
+}
+
