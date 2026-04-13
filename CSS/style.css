@@ -159,7 +159,7 @@ body {
 
  .banner {
     background: linear-gradient (135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%),
-    url('hero.jpg') center/cover;
+    url('hero.webp') center/cover;
     color: #4b2e2b;
     padding: 60px 0;
     min-height: 25vh;
